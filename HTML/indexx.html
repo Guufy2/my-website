@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de manicura</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        VitaliyaTopNails
+    </header>
+    <main>
+        <!-- Если хочешь по центру, сделай для секции w-full, а контент дальше заверни в див и отцентрируй -->
+        <section>
+            <h1 class="About-her">Sobre mi</h1>
+            <div class="about-container">   
+                <img src="/Imgs/Vita.jpg" alt="Vitaliya Yurlova" class="vita-photo">
+                <div class="text-container">
+                    <!-- У тебя уже есть заголовок для этой секции, сделай просто p -->
+                    <h2 id="name">Vitaliya <span>Yurlova</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <!-- ссылки лучше в хедер и в тег nav -->
+                    <div class="insta-telega">
+                        <a href="https://www.instagram.com/vitaliya_top_nails/" target="_blank"> 
+                            <img src="/Imgs/Instagram Logo (PNG-1080p) - Vector69Com.png" alt="instagram" width="50px">
+                        </a>
+                        <a href="https://t.me/YVitusik" target="_blank"> 
+                            <img src="/Imgs/1c6618285f396afc6b61de7cf9736658.png" alt="telegram" width="50px">
+                        </a>
+                    </div>
+                </div>    
+            </div> 
+        </section>
+        <!-- У артикла должен быть заголовок(но не h1, только 1! h1 может быть на странице) -->
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+        </article>
+        <section>
+            <!-- только 1 h1 может быть на странице -->
+            <h1 class="my-services-text">Mis servicios</h1>
+            <div class="service-container">
+                <!-- service-1 service-2 и т.д в артиклы оберни, про оформление заголовков для артиклов лучше чекни в инете  -->
+                <div class="service-1">
+                    <div class="service-content">
+                        <img src="/Imgs/Rusa1.jpg" alt="Manicura Rusa" onclick="openModal(this)">
+                        <div class="title-and-description">    
+                            <h2 class="Service-titles" onclick="toggleContent(this)">
+                                Manicura rusa con esmaltado permanente <span class="arrow">▼</span>
+                            </h2>
+                            <div class="description">
+                                <p class="visible-description"> 
+                                    Teqnica especial de Rusia
+                                </p>
+                                <p class="hidden-description">
+                                    La manicura rusa es una técnica de cuidado de uñas que se centra en conseguir unas uñas impecablemente limpias y cuidadas. Esta técnica  
+                                    se realiza en seco con el torno y tijera y deja las uñas totalmente limpias, sin cutícula. De hecho, se trata de una técnica profesional 
+                                    meticulosa y delicada que sólo manicuristas profesionales instruidas o instruidos en ella son capaces de realizar.
+                                    <div class="more-imgs">
+                                        <img src="/Imgs/manicuraRusa2.jpg" alt="Rusa2" onclick="openModal(this)">
+                                        <img src="/Imgs/manicuraRusa3.jpg" alt="Rusa2" onclick="openModal(this)">
+                                    </div>
+                                </p>
+                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
+                            </div>
+                        </div>    
+                    </div>    
+                </div>
+                <div class="service-2">
+                    <div class="service-content">
+                        <img src="/Imgs/DualSystem1.jpg" alt="" onclick="openModal(this)">
+                        <div class="title-description">    
+                            <h2 class="Service-titles" onclick="toggleContent(this)">
+                                Dual system <span class="arrow">▼</span>
+                            </h2>
+                            <div class="description">
+                                <p class="visible-description"> 
+                                    Systema Dual para unas largas
+                                </p>
+                                <p class="hidden-description">Extensión de uñas con tips Dual system es una  técnica donde se utilizan moldes especialmente diseñados para dar el
+                                    efecto uña construida. Hoy a dia esta muy popular y moderna. Los tips de Dual system (sistema dual) nos
+                                    permiten realizar la extensión de uñas con polygel o gel más rápido y fácil ya que los tips te dan la forma
+                                    de la uña. Solo tienes que escoger qué tip se adapta mejor a la uña, aplicar el polygel o gel en el tip y antes
+                                    de meter en lámpara poner el tip en la uña.
+                                </p>
+                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="service-3">
+                    <div class="service-content">
+                        <img src="/Imgs/Softgel1.jpg" alt="" onclick="openModal(this)">
+                        <div class="title-description">    
+                            <h2 class="Service-titles" onclick="toggleContent(this)">
+                                Soft gel <span class="arrow">▼</span>
+                            </h2>
+                            <div class="description">
+                                <p class="visible-description"> 
+                                    Teqnica muy soft para unas largas i cortas
+                                </p>
+                                <p class="hidden-description">
+                                    Soft Gel es un nuevo método de extensión con tips. Los tips Soft Gel (press on) 
+                                    están hechos de un gel suave y flexible que tiene el mejor rendimiento en el proceso de extensión de uñas.Con la 
+                                    técnica de Soft Gel se puede realizar extensiones de uñas de forma sencilla y rapida adhiriéndolos directamente sobre la uña natural.
+                                </p>
+                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="service-4">  
+                    <div class="service-content">
+                        <img class="img4-res" src="/Imgs/Extencion1.jpg" alt="" onclick="openModal(this)">
+                        <div class="title-description">    
+                            <h2 class="Service-titles" onclick="toggleContent(this)">
+                                Extencion de unas con gel y polygel <span class="arrow">▼</span>
+                            </h2>
+                            <div class="description">
+                                <p class="visible-description">
+                                    Extencion para unas cortas con gel y polygel     
+                                </p>
+                                <p class="hidden-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                                    esse cillum dolore eu fugiat nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                </p>
+                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- ачё футер пустой -->
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <script src="/HTML/Scripts.js"></script>
+</body>
+<!-- если память не изменяет, то нужен закрывающий тег html -->
