@@ -10,7 +10,7 @@ body {
 
 /* Нзвание сайта на самом верху */
 header {
-    background-image: url("/Imgs/PinkBG.jpg");
+    background-image: url("Imgs/PinkBG.jpg");
     background-size: cover;
     background-position: top left;
     color: white;
