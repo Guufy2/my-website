@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de manicura</title>
     <link rel="stylesheet" href="JSnCSS/style.css">
+    <style>
+        * {
+            will-change: transform, opacity; /* Улучшает производительность анимаций */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -51,7 +56,12 @@
                 <!-- service-1 service-2 и т.д в артиклы оберни, про оформление заголовков для артиклов лучше чекни в инете  -->
                 <div class="service-1">
                     <div class="service-content">
-                        <img src="Imgs/Rusa1.jpg" alt="Manicura Rusa" onclick="openModal(this)">
+                        <div class="thumbnails">
+                            <img src="Imgs/Rusa1tiny.jpg" alt="Rusa1" class="active" data-full="Imgs/Rusa1.jpg">
+                            <img src="Imgs/manicuraRusa2tiny.jpg" alt="Rusa2" data-full="Imgs/manicuraRusa2.jpg">
+                            <img src="Imgs/manicuraRusa3tiny.jpg" alt="Rusa3" data-full="Imgs/manicuraRusa3.jpg">
+                        </div>
+                        <img id="mainServiceImage" class="main-img" src="Imgs/Rusa1.jpg" alt="Manicura Rusa">
                         <div class="title-and-description">    
                             <h2 class="Service-titles" onclick="toggleContent(this)">
                                 Manicura rusa con esmaltado permanente <span class="arrow">▼</span>
@@ -64,10 +74,6 @@
                                     La manicura rusa es una técnica de cuidado de uñas que se centra en conseguir unas uñas impecablemente limpias y cuidadas. Esta técnica  
                                     se realiza en seco con el torno y tijera y deja las uñas totalmente limpias, sin cutícula. De hecho, se trata de una técnica profesional 
                                     meticulosa y delicada que sólo manicuristas profesionales instruidas o instruidos en ella son capaces de realizar.
-                                    <div class="more-imgs">
-                                        <img src="Imgs/manicuraRusa2.jpg" alt="Rusa2" onclick="openModal(this)">
-                                        <img src="Imgs/manicuraRusa3.jpg" alt="Rusa2" onclick="openModal(this)">
-                                    </div>
                                 </p>
                                 <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
                             </div>
@@ -76,7 +82,7 @@
                 </div>
                 <div class="service-2">
                     <div class="service-content">
-                        <img src="Imgs/DualSystem1.jpg" alt="" onclick="openModal(this)">
+                        <img class="main-img" src="Imgs/DualSystem1.jpg" alt="">
                         <div class="title-description">    
                             <h2 class="Service-titles" onclick="toggleContent(this)">
                                 Dual system <span class="arrow">▼</span>
@@ -98,7 +104,7 @@
                 </div>
                 <div class="service-3">
                     <div class="service-content">
-                        <img src="Imgs/Softgel1.jpg" alt="" onclick="openModal(this)">
+                        <img class="main-img" src="Imgs/Softgel1.jpg" alt="">
                         <div class="title-description">    
                             <h2 class="Service-titles" onclick="toggleContent(this)">
                                 Soft gel <span class="arrow">▼</span>
@@ -119,7 +125,7 @@
                 </div>
                 <div class="service-4">  
                     <div class="service-content">
-                        <img class="img4-res" src="Imgs/Extencion1.jpg" alt="" onclick="openModal(this)">
+                        <img class="main-img" src="Imgs/Extencion1.jpg" alt="">
                         <div class="title-description">    
                             <h2 class="Service-titles" onclick="toggleContent(this)">
                                 Extencion de unas con gel y polygel <span class="arrow">▼</span>
@@ -144,10 +150,6 @@
     <footer>
         <!-- ачё футер пустой -->
     </footer>
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
     <script src="JSnCSS/Scripts.js"></script>
 </body>
 </html>

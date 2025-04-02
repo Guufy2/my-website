@@ -10,7 +10,7 @@ body {
 
 /* Нзвание сайта на самом верху */
 header {
-    background-image: url("Imgs/PinkBG.jpg");
+    background-image: url("/Imgs/PinkBG.jpg");
     background-size: cover;
     background-position: top left;
     color: white;
@@ -125,11 +125,13 @@ article p {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    transition: 
+    max-height 0.2s ease-out,
+    opacity 0.2s linear !important;
     margin: 0;
 }
 
-.expanded .hidden-description {
+.hidden-description.visible {
     max-height: 500px;
     opacity: 1;
 }
@@ -162,20 +164,19 @@ article p {
     transform: scale(1.02);
 }
 
-/* фото сервисов */
-.service-content img {
+/* Основное фото сервисов */
+.main-img {
     margin: 1.25rem;
     margin-left: 1rem;
     width: 100%;
     height: auto;
     width: 10rem;
-    transition: width 0.3s ease-in-out;
-    cursor: zoom-in;
+    transition: width 0.2s ease-in-out, transform 0.5 ease, opacity 0.1s linear !important;
     border: 2px solid rgb(53, 23, 30);
 }
 
 /* расширение фото */
-.service-content.expanded img {
+.main-img.expanded {
     width: 20rem;
     height: 564px;
 }
@@ -241,105 +242,143 @@ article p {
     cursor: pointer;
 }
 
-.more-imgs {
-    display: none;
-    margin-left: 0;
-    margin: 0;
-}
-
-.more-imgs .expanded {
-    margin-bottom: 5%;
-    margin-left: 0;
-}
-
 .img4-res {
     max-height: 500px;
 }
 
+.thumbnails {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    margin-left: 2%;
+    gap: 40px;
+    justify-content: center;
+    transition: none !important; /* Отключаем анимацию для миниатюр */
+    transform: translateX(-20px);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
+.thumbnails img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thumbnails img.active{
+    border: 2px solid rgb(87, 19, 29);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-content.expanded .thumbnails {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}   
 
 /* Медиа-запросы для адаптации под мобильные устройства */
 @media (max-width: 768px) {
     header {
         font-size: 2.5rem;
         padding: 3rem 1rem;
+        background-position: center;
     }
 
     .About-her {
         margin-left: 1rem;
         font-size: 2.5rem;
         justify-content: center;
+        text-align: center;
     }
 
     .about-container {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin: 1rem;
         flex-direction: column;
         gap: 2rem;
         margin-bottom: 50px;
+        align-items: center;
     }
 
     .vita-photo {
         width: 280px;
         height: 420px;
         margin-right: 0;
+        order: -1; /* Перемещаем фото выше текста */
+    }
+
+    .text-container {
+        align-items: center;
+        text-align: center;
     }
 
     .about-container h2 {
         font-size: 2rem;
-        text-align: center;
     }
 
     .about-container p {
         font-size: 1.5rem;
-        max-width: 100%;
+        padding: 0 1rem;
     }
 
     article {
-        font-size: 18px;
+        font-size: 1.1rem;
         max-width: 90%;
         padding: 15px;
-        margin-bottom: 50px;
+        margin: 0 auto 50px;
         border-radius: 30px;
+        text-align: center;
     }
 
     .Service-titles {
         font-size: 1.8rem;
         margin: 1rem;
+        text-align: center;
     }
 
     .description {
-        font-size: 1.5rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 100%;
+        font-size: 1.3rem;
+        margin: 0 1rem;
+        text-align: center;
     }
 
     .service-content {
         flex-direction: column;
         align-items: center;
+        padding: 15px;
     }
 
-    .service-content img {
-        margin-left: 0;
-        margin-right: 0;
-        width: 80%;
+    .main-img {
+        width: 100%;
         max-width: 250px;
-        margin-right: 20px;
+        margin: 1rem auto;
     }
 
-    .service-content.expanded img {
-        width: 90%;
+    .main-img.expanded {
+        width: 100%;
         height: auto;
         max-width: 300px;
     }
 
+    .thumbnails {
+        flex-direction: row;
+        gap: 15px;
+        margin: 15px 0;
+        order: 2; /* Миниатюры после основного фото */
+    }
+
+    .thumbnails img {
+        width: 60px;
+        height: 60px;
+    }
+
     .service-container {
         padding: 20px;
+        gap: 2rem;
     }
 
     .my-services-text {
         font-size: 2.5rem;
+        padding: 0 1rem;
     }
 
     .close {
@@ -354,18 +393,12 @@ article p {
     header {
         font-size: 2rem;
         padding: 2rem 0.5rem;
+        background-size: cover;
     }
 
     .About-her {
         font-size: 2rem;
-    }
-
-    .about-container h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-container p {
-        font-size: 1.2rem;
+        margin: 0 0.5rem;
     }
 
     .vita-photo {
@@ -373,15 +406,63 @@ article p {
         height: 330px;
     }
 
+    .about-container h2 {
+        font-size: 1.7rem;
+    }
+
+    .about-container p {
+        font-size: 1.1rem;
+    }
+
     .Service-titles {
         font-size: 1.5rem;
+        margin: 0.8rem;
     }
 
     .description {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .main-img {
+        max-width: 200px;
+    }
+
+    .main-img.expanded {
+        max-width: 250px;
+    }
+
+    .thumbnails {
+        gap: 10px;
+    }
+
+    .thumbnails img {
+        width: 50px;
+        height: 50px;
     }
 
     .my-services-text {
         font-size: 2rem;
+    }
+
+    article {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Особые стили для landscape-ориентации */
+@media (max-width: 768px) and (orientation: landscape) {
+    .about-container {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .vita-photo {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .about-container p {
+        font-size: 1.2rem;
     }
 }
