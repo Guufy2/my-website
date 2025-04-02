@@ -1,3 +1,14 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -242,9 +253,9 @@ article p {
     cursor: pointer;
 }
 
-.img4-res {
+/* .img4-res {
     max-height: 500px;
-}
+} */
 
 .thumbnails {
     display: none;
@@ -278,10 +289,16 @@ article p {
 
 /* Медиа-запросы для адаптации под мобильные устройства */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    
     header {
         font-size: 2.5rem;
         padding: 3rem 1rem;
         background-position: center;
+        overflow-x: hidden;
     }
 
     .About-her {
@@ -363,7 +380,13 @@ article p {
         flex-direction: row;
         gap: 15px;
         margin: 15px 0;
-        order: 2; /* Миниатюры после основного фото */
+        order: 1; /* Миниатюры после основного фото */
+    }
+
+    .title-and-description {
+        order: 2; /* Forces description below thumbnails */
+        width: 100%;
+        padding: 0 15px;
     }
 
     .thumbnails img {
