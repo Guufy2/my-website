@@ -33,9 +33,14 @@ header {
     padding: 5rem 1.25rem;
 }
 
+.vita-container {
+    margin: 0 auto;
+    max-width: 2000px;
+}
+
 /* Надпись sobre mi */
 .About-her {
-    margin-left: 16rem;
+    margin-left: 18vw;
     margin-bottom: 0rem;
     display: flex;
     justify-content: left;
@@ -45,7 +50,7 @@ header {
 
 /* Текст о Вите кроме sobre mi */
 .about-container {
-    margin-left: 200px;
+    margin-left: 15vw;
     margin-top: 1.25rem;
     display: flex;
     flex-direction: row;

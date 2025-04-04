@@ -18,28 +18,30 @@
     <main>
         <!-- Если хочешь по центру, сделай для секции w-full, а контент дальше заверни в див и отцентрируй -->
         <section>
-            <h1 class="About-her">Sobre mi</h1>
-            <div class="about-container">   
-                <img src="Imgs/Vita.jpg" alt="Vitaliya Yurlova" class="vita-photo">
-                <div class="text-container">
-                    <!-- У тебя уже есть заголовок для этой секции, сделай просто p -->
-                    <h2 id="name">Vitaliya <span>Yurlova</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </p>
-                    <!-- ссылки лучше в хедер и в тег nav -->
-                    <div class="insta-telega">
-                        <a href="https://www.instagram.com/vitaliya_top_nails/" target="_blank"> 
-                            <img src="Imgs/Instagram Logo (PNG-1080p) - Vector69Com.png" alt="instagram" width="50px">
-                        </a>
-                        <a href="https://t.me/YVitusik" target="_blank"> 
-                            <img src="Imgs/1c6618285f396afc6b61de7cf9736658.png" alt="telegram" width="50px">
-                        </a>
-                    </div>
-                </div>    
-            </div> 
+            <div class="vita-container">
+                <h1 class="About-her">Sobre mi</h1>
+                <div class="about-container">   
+                    <img src="Imgs/Vita.jpg" alt="Vitaliya Yurlova" class="vita-photo">
+                    <div class="text-container">
+                        <!-- У тебя уже есть заголовок для этой секции, сделай просто p -->
+                        <h2 id="name">Vitaliya <span>Yurlova</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        </p>
+                        <!-- ссылки лучше в хедер и в тег nav -->
+                        <div class="insta-telega">
+                            <a href="https://www.instagram.com/vitaliya_top_nails/" target="_blank"> 
+                                <img src="Imgs/Instagram Logo (PNG-1080p) - Vector69Com.png" alt="instagram" width="50px">
+                            </a>
+                            <a href="https://t.me/YVitusik" target="_blank"> 
+                                <img src="Imgs/1c6618285f396afc6b61de7cf9736658.png" alt="telegram" width="50px">
+                            </a>
+                        </div>
+                    </div>    
+                </div> 
+            </div>    
         </section>
         <!-- У артикла должен быть заголовок(но не h1, только 1! h1 может быть на странице) -->
         <article>
@@ -59,7 +61,7 @@
                         <div class="thumbnails">
                             <img src="Imgs/Rusa1tiny.jpg" alt="Rusa1" class="active" data-full="Imgs/Rusa1.jpg">
                             <img src="Imgs/manicuraRusa2tiny.jpg" alt="Rusa2" data-full="Imgs/manicuraRusa2.jpg">
-                            <img src="Imgs/manicuraRusa3tiny.jpg" alt="Rusa3" data-full="Imgs/manicuraRusa3.jpg">
+                            <img src="Imgs/manicuraRusa4tiny.jpg" alt="Rusa3" data-full="Imgs/manicuraRusa4.jpg">
                         </div>
                         <img id="mainServiceImage" class="main-img" src="Imgs/Rusa1.jpg" alt="Manicura Rusa">
                         <div class="title-and-description">    
@@ -75,14 +77,18 @@
                                     se realiza en seco con el torno y tijera y deja las uñas totalmente limpias, sin cutícula. De hecho, se trata de una técnica profesional 
                                     meticulosa y delicada que sólo manicuristas profesionales instruidas o instruidos en ella son capaces de realizar.
                                 </p>
-                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
                             </div>
                         </div>    
                     </div>    
                 </div>
                 <div class="service-2">
                     <div class="service-content">
-                        <img class="main-img" src="Imgs/DualSystem1.jpg" alt="">
+                        <div class="thumbnails">
+                            <img src="Imgs/DualSystem1tiny.jpg"  alt="Dual system" class="active" data-full="Imgs/DualSystem1.jpg">
+                            <img src="Imgs/DualSystem2tiny.jpg"  alt="Dual system" data-full="Imgs/DualSystem2.jpg">
+                            <img src="Imgs/DualSystem3tiny.jpg"  alt="Dual system" data-full="Imgs/DualSystem3.jpg">
+                        </div>
+                        <img id="mainServiceImage" class="main-img" src="Imgs/DualSystem1.jpg" alt="Dual system">
                         <div class="title-description">    
                             <h2 class="Service-titles" onclick="toggleContent(this)">
                                 Dual system <span class="arrow">▼</span>
@@ -97,14 +103,16 @@
                                     de la uña. Solo tienes que escoger qué tip se adapta mejor a la uña, aplicar el polygel o gel en el tip y antes
                                     de meter en lámpara poner el tip en la uña.
                                 </p>
-                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
                             </div>
                         </div>
                     </div>    
                 </div>
                 <div class="service-3">
                     <div class="service-content">
-                        <img class="main-img" src="Imgs/Softgel1.jpg" alt="">
+                        <div class="thumbnails">
+                            <img src="Imgs/Softgel1tiny.jpg" alt="Soft gel" class="active" data-full="Imgs/Softgel1.jpg">
+                        </div>
+                        <img id="mainServiceImage" class="main-img" src="Imgs/Softgel1.jpg" alt="">
                         <div class="title-description">    
                             <h2 class="Service-titles" onclick="toggleContent(this)">
                                 Soft gel <span class="arrow">▼</span>
@@ -118,14 +126,18 @@
                                     están hechos de un gel suave y flexible que tiene el mejor rendimiento en el proceso de extensión de uñas.Con la 
                                     técnica de Soft Gel se puede realizar extensiones de uñas de forma sencilla y rapida adhiriéndolos directamente sobre la uña natural.
                                 </p>
-                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
                             </div>
                         </div>
                     </div>    
                 </div>
                 <div class="service-4">  
                     <div class="service-content">
-                        <img class="main-img" src="Imgs/Extencion1.jpg" alt="">
+                        <div class="thumbnails">
+                            <img src="Imgs/Extencion1tiny.jpg" alt="Extencion" class="active" data-full="Imgs/Extencion1.jpg">
+                            <img src="Imgs/Extencion2tiny.jpg" alt="Extencion" data-full="Imgs/Extencion2.jpg">
+                            <img src="Imgs/Extencion3tiny.jpg" alt="Extencion" data-full="Imgs/Extencion3.jpg">
+                        </div>
+                        <img id="mainServiceImage" class="main-img" src="Imgs/Extencion1.jpg" alt="Extencion">
                         <div class="title-description">    
                             <h2 class="Service-titles" onclick="toggleContent(this)">
                                 Extencion de unas con gel y polygel <span class="arrow">▼</span>
@@ -134,12 +146,12 @@
                                 <p class="visible-description">
                                     Extencion para unas cortas con gel y polygel     
                                 </p>
-                                <p class="hidden-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                <p class="hidden-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
                                     esse cillum dolore eu fugiat nulla pariatur.
                                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                                 </p>
-                                <!-- просто вставь сюда ещё картинки и всё, только тебе по размерам надо подогнать их, для обтекания текстом можно использовать float -->
                             </div>
                         </div>
                     </div>    
