@@ -87,3 +87,52 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-image");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let currentGallery = [];
+let currentIndex = 0;
+
+// Открыть модалку
+document.querySelectorAll('.main-img').forEach(img => {
+    img.addEventListener('click', () => {
+        const galleryName = img.dataset.gallery;
+        currentGallery = Array.from(document.querySelectorAll(`[data-gallery="${galleryName}"]`));
+        currentIndex = currentGallery.findIndex(i => i.src === img.src);
+
+        showImage(currentIndex);
+        modal.classList.remove("hidden");
+    });
+});
+
+function showImage(index) {
+    if (currentGallery.length === 0) return;
+    const img = currentGallery[index];
+    modalImg.src = img.src;
+}
+
+// Переключатели
+nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    showImage(currentIndex);
+});
+
+prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    showImage(currentIndex);
+});
+
+// Закрытие
+closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.add("hidden");
+    }
+});
